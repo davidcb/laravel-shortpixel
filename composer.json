@@ -1,0 +1,39 @@
+{
+    "name": "davidcb/laravel-shortpixel",
+    "description": "Laravel 5 package for ShortPixel API integration",
+    "keywords": ["laravel", "laravel5", "shortpixel", "integration", "image", "optimization"],
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "David Couto",
+            "email": "davidcouto@gmail.com",
+            "homepage": "https://davidcouto.com"
+        }
+    ],
+    "homepage": "https://github.com/davidcb/laravel-shortpixel",
+    "require": {
+        "shortpixel/shortpixel-php": "*"
+    },
+    "require-dev": {},
+    "autoload": {
+        "psr-4": {
+            "Davidcb\\LaravelShortPixel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Davidcb\\LaravelShortPixel\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Davidcb\\LaravelShortPixel\\LaravelShortPixelServiceProvider"
+            ],
+            "aliases": {
+                "LaravelShortPixel": "Davidcb\\LaravelShortPixel\\Facades\\LaravelShortPixel"
+            }
+        }
+    }
+}
