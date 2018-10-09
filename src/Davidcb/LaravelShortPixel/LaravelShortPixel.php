@@ -1,6 +1,6 @@
 <?php
 
-namespace Davidcb/LaravelShortPixel;
+namespace Davidcb\LaravelShortPixel;
 
 use ShortPixel;
 
