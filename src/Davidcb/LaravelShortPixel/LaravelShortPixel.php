@@ -8,9 +8,20 @@ class LaravelShortPixel {
 
     protected $file;
 
+    protected $customizeableConfigs = [
+        'convertto',
+        'keep_exif'
+    ];
+
     public function __construct()
     {
         ShortPixel\setKey(config('shortpixel.api_key'));
+
+        foreach($this->customizeableConfigs as $config) {
+            if($value = config('shortpixel.' . $config)) {
+                ShortPixel\ShortPixel::setOptions(array($config => $value));
+            }
+        }
     }
 
     public function fromUrls($url, $path = null, $filename = null, $level = null, $width = null, $height = null, $max = false)
