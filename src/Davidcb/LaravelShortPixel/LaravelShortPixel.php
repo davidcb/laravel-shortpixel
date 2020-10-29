@@ -46,16 +46,8 @@ class LaravelShortPixel {
             $path = config('shortpixel.default_path');
         }
 
-        $stop = false;
-        while (!$stop) {
-            $this->file = ShortPixel\fromFolder($folder)->wait(300);
-            $ret = $this->save($path, null, $level, $width, $height, $max);
-            if (count($ret->succeeded) + count($ret->failed) + count($ret->same) + count($ret->pending) == 0) {
-                $stop = true;
-            }
-        }
-
-        return $ret;
+        $this->file = ShortPixel\fromFolder($folder)->wait(300);
+        return $this->save($path, null, $level, $width, $height, $max);
     }
 
     private function optimize($level = null)
