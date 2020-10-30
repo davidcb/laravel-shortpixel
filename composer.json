@@ -1,7 +1,7 @@
 {
     "name": "davidcb/laravel-shortpixel",
-    "description": "Laravel 5 package for ShortPixel API integration",
-    "keywords": ["laravel", "laravel5", "shortpixel", "integration", "image", "optimization"],
+    "description": "Laravel 5+ package for ShortPixel API integration",
+    "keywords": ["laravel", "shortpixel", "integration", "image", "optimization"],
     "license": "MIT",
     "minimum-stability": "dev",
     "authors": [
