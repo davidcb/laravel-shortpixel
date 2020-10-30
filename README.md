@@ -1,5 +1,5 @@
 # Laravel-Shortpixel
-Laravel 5 wrapper for ShortPixel API
+Laravel 5+ wrapper for ShortPixel API
 
 - [Laravel-Shortpixel on Packagist](https://packagist.org/packages/davidcb/laravel-shortpixel)
 - [Laravel-Shortpixel on GitHub](https://github.com/davidcb/laravel-shortpixel)
