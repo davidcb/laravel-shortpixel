@@ -11,13 +11,13 @@ class LaravelShortPixelServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../../config/shortpixel.php' => config_path('shortpixel.php'),
+            __DIR__.'/config/shortpixel.php' => config_path('shortpixel.php'),
         ], 'config');
     }
 
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../../config/shortpixel.php', 'shortpixel');
+        $this->mergeConfigFrom(__DIR__.'/config/shortpixel.php', 'shortpixel');
 
         $this->app->singleton('laravel-shortpixel', function ($app) {
             return new LaravelShortPixel($app);
