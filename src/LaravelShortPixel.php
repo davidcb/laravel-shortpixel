@@ -4,7 +4,8 @@ namespace Davidcb\LaravelShortPixel;
 
 use ShortPixel;
 
-class LaravelShortPixel {
+class LaravelShortPixel
+{
 
     protected $file;
 
@@ -17,8 +18,8 @@ class LaravelShortPixel {
     {
         ShortPixel\setKey(config('shortpixel.api_key'));
 
-        foreach($this->customizeableConfigs as $config) {
-            if($value = config('shortpixel.' . $config)) {
+        foreach ($this->customizeableConfigs as $config) {
+            if ($value = config('shortpixel.' . $config)) {
                 ShortPixel\ShortPixel::setOptions(array($config => $value));
             }
         }
@@ -83,7 +84,6 @@ class LaravelShortPixel {
             $this->resize($width, $height, $max);
         }
 
-        return $this->file->toFiles($path, $filename);
+        return $this->file->generateWebP()->toFiles($path, $filename);
     }
-
 }
