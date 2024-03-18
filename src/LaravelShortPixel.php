@@ -84,6 +84,6 @@ class LaravelShortPixel
             $this->resize($width, $height, $max);
         }
 
-        return $this->file->generateWebP()->toFiles($path, $filename);
+        return $this->file->toFiles($path, $filename);
     }
 }
